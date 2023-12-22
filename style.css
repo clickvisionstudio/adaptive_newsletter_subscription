@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: hsl(234 29% 20%);
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  color: hsl(234 29% 20%);
+  height: 32rem;
+  width: 45rem;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+
+#contents {
+  box-sizing: border-box;
+  width: 55%;
+  padding: 0 3rem 0 2rem;
+  font-size: 12px;
+}
+
+#benefits h2{
+  font-size: 2.6rem;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+}
+
+#benefits ul{
+  list-style: none;
+  padding-left: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 1.0rem;
+}
+
+#benefits li{
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#benefits li::before{
+  content: url("./assets/images/icon-list.svg");
+  margin-right: 0.6rem;
+}
+
+#user_input{
+  display: flex;
+  flex-direction: column;
+}
+
+#user_input label{
+  font-weight: bold;
+  font-size: 11px;
+}
+
+#user_input input{
+  height: 2.7rem;
+  border-radius: 0.5rem;
+  border: solid;
+  border-width: 1px;
+  border-color: darkgray;
+  margin-bottom: 1.2rem;
+
+  box-sizing: border-box;
+  padding: 0 18px;
+}
+
+#user_input input:focus{
+  outline:none;
+}
+
+#user_input label{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+
+#user_input .warning{
+  color:tomato;
+}
+
+#user_input .hidden{
+  visibility: hidden;
+}
+
+
+#user_input input:invalid{
+  background: rgba(255,99,71,0.2);
+  border-color: tomato;
+  color: tomato;
+}
+
+button{
+  height: 2.7rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  background: hsl(234 29% 20%);
+}
+
+button:focus{
+  outline:none;
+}
+
+button:hover{
+  cursor: pointer;
+  background-image: linear-gradient(90deg, #ff5279, tomato);
+  filter: drop-shadow(0rem 0.5rem 0.5rem tomato)
+}
+
+
+#image {
+  height: 100%;
+  width: 45%;
+  background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-overflow: hidden;
+  border-radius: 1.0rem;
+}
+
+
+::backdrop{
+  background: hsl(234 29% 20%);
+}
+
+dialog {
+  width: 28rem;
+  box-sizing: border-box;
+  border: none;
+  padding: 3rem 4rem;
+  border-radius: 2rem;
+}
+
+dialog h1{
+  font-size: 45px;
+}
+
+dialog p{
+  font-size: 14px;
+}
+
+dialog button{
+  height: 3rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.attribution {
+  position: relative;
+  color: white;
+}
+
+.attribution p{
+  text-align: center;
+  font-size: 11px;
+  font-weight: 100;
+}
+
+.attribution a{
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (max-width:375px){
+  body {
+    background: white;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    border-radius: 0;
+    padding: 0;
+  }
+  
+  #contents {
+    width: 100%;
+    padding: 0 2rem;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+  }
+
+  #benefits li{
+    padding: 0.6rem 0rem;
+    align-items: start;
+  }
+  
+  #user_input input{
+    height: 3.2rem;
+  }
+
+  button{
+    height: 3.2rem;
+  }
+
+
+  #image {
+    height: 35%;
+    width: 100%;
+    background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+    border-radius: 1.0rem;
+    margin-bottom: 2rem;
+  }
+  
+  ::backdrop{
+    background: white;
+  }
+
+  dialog[open]{
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: 14px;
+  }
+
+  dialog div{
+    margin-bottom: 10rem;
+  }
+  
+  dialog h1{
+    font-size: 40px;
+  }
+
+  dialog p{
+    line-height: 1.4;
+  }
+
+  dialog button{
+    margin: 4rem 0rem 3rem 0rem;
+  }
+
+  .attribution p{
+    color:black;
+  }
+}
+
